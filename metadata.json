@@ -1,0 +1,8 @@
+{
+  "name": "BreakTheLoop",
+  "description": "A continuous learning and readiness intelligence platform for college students, providing early feedback and learning trajectory insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

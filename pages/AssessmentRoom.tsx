@@ -67,7 +67,8 @@ const AssessmentRoom: React.FC = () => {
       const readinessProfile = await analyzeSession(finalHistory, profile);
       
       // Level Judgment Logic:
-      const scores = Object.values(readinessProfile.dimensions);
+      // Fixed: Cast Object.values result to number[] to resolve 'unknown' arithmetic errors in reduce
+      const scores = Object.values(readinessProfile.dimensions) as number[];
       const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
       
       let determinedLevel: ProficiencyLevel = 1;
